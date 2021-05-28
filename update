@@ -1,11 +1,7 @@
 #!/bin/bash
 
 function\(installupdates\){
-<<<<<<< HEAD
     sudo apt update && sudo apt upgrade -y
-=======
-    echo "PASSWD" | sudo apt update && sudo apt upgrade -y
->>>>>>> fa186044625e4f853330ccde5bbe56680ac8601e
 }
 
 
