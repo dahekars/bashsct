@@ -1,4 +1,4 @@
 #!/bin/bash
 function\(install_VS_code\){
-    echo "apsa2772S@1" | sudo snap install --classic code
+    echo "PASSWD" | sudo snap install --classic code
 }
