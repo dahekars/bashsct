@@ -1,6 +1,7 @@
 #!/bin/bash
+
 function\(installupdates\){
-    echo "apsa2772S@1" | sudo apt update && sudo apt upgrade -y
+    sudo apt update && sudo apt upgrade -y
 }
 
 
