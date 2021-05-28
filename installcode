@@ -2,6 +2,7 @@
 read -p "which package manager: " pkmg
 
 function\(install_VS_code\){
+<<<<<<< HEAD
     sudo $pkmg install snapld
     sudo snap install --classic code # VScode 
 }
@@ -15,4 +16,7 @@ function\(discord\){
 
 function\(terminator\){
     sudo $pkmg install terminator
+=======
+    echo "PASSWD" | sudo snap install --classic code
+>>>>>>> fa186044625e4f853330ccde5bbe56680ac8601e
 }
