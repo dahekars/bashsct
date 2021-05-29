@@ -4,8 +4,8 @@
 python -m pip install --upgrade pip
 
 # pip install moduals 
-function\(moduals_for_py\){
-    pip install openssl
+moduals_for_py() {
+    pip install pyOpenSSL
     pip install opencv-python 
     pip install torch
     pip install pygame
@@ -30,9 +30,13 @@ function\(moduals_for_py\){
     pip install blinker
     pip install pytube
     pip install tensorflow
-    
+
 
 }
+
+moduals_for_py
+
+echo $moduals_for_py
 
 # pip install AWS 
 pip3 install awscli --upgrade --user
