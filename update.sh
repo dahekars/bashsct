@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "starting"
-function update(){
+update(){
     sudo apt update && sudo apt upgrade -y
 }
 update

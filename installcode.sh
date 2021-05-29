@@ -1,7 +1,7 @@
 #!/bin/bash
 read -p "which package manager: " pkmg
 
-function\(installtools\){
+install_tool(){
     # VScode
     sudo $pkmg install snapl
     sudo snap install --classic code # VScode 
@@ -63,3 +63,8 @@ function\(installtools\){
     sudo $pkmg install htop
 
 }
+
+install_tool
+
+echo $install_tool
+

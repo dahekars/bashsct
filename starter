@@ -1,6 +1,0 @@
-#!/bin/bash
-
-gnome-terminal -- ./update
-gnome-terminal -- ./installcode 
-gnome-terminal -- ./pip_install
-
