@@ -30,5 +30,12 @@ function\(moduals_for_py\){
     pip install blinker
     pip install pytube
     pip install tensorflow
-    
+
 }
+
+# pip install AWS 
+pip3 install awscli --upgrade --user
+
+pip install awscli --upgrade --user
+
+aws --version

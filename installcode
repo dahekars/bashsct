@@ -1,18 +1,18 @@
 #!/bin/bash
 read -p "which package manager: " pkmg
 
-function\(install_VS_code\){
+function\(installtools\){
+    # VScode
     sudo $pkmg install snapl
     sudo snap install --classic code # VScode 
-}
 
-url = "https://discord.com/api/download?platform=linux&format=deb"
-
-function\(discord\){
-    wget $url -P /tmp/discord.deb #downlaod Discord from web
+    # Discord
+    wget https://discord.com/api/download?platform=linux&format=deb -P /tmp/discord.deb #downlaod Discord from web
     sudo $pkmg install ./tmp/discord.deb #start installing discord
-}
 
-function\(terminator\){
+    #terminator
     sudo $pkmg install terminator
+
+    # XDM
+    
 }
