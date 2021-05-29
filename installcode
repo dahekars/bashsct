@@ -14,5 +14,12 @@ function\(installtools\){
     sudo $pkmg install terminator
 
     # XDM
-    
+    mkdir /tmp/XDM
+    wget https://github.com/subhra74/xdm/releases/download/7.2.11/xdm-setup-7.2.11.tar.xz -P /tmp/XDM/
+    tar –xvzf /tmp/XDM/*
+    #gnome-terminal -- ./tmp/XDM/
+
+    #ssh
+    sudo $pkmg install openssh-server
+
 }
