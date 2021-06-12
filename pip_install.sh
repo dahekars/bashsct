@@ -30,7 +30,7 @@ moduals_for_py() {
     pip install blinker
     pip install pytube
     pip install tensorflow
-    pip install speedtest
+    pip install speedtest-cli
 
 }
 
