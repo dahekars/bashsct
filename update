@@ -1,0 +1,10 @@
+!#/bin/bash
+
+update (){
+	sudo apt update -y && sudo apt upgrade -y 
+}
+
+update 
+
+echo $update
+
