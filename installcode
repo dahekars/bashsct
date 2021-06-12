@@ -1,0 +1,100 @@
+#!/bin/bash
+
+echo "starting install"
+
+install_tool() {
+    echo """
+
+    # VScode
+
+    """
+    sudo apt install snapd
+    sudo snap install --classic code # VScode 
+
+    echo """
+
+    #terminator
+
+    """
+    sudo apt install terminator -y
+
+    echo """
+    
+    # XDM
+
+    """
+    wget https://github.com/subhra74/xdm/releases/download/7.2.11/xdm-setup-7.2.11.tar.xz 
+    tar –xf xdm-setup-7.2.11.tar.xz
+    sudo chmod -x install.sh
+    sudo apt install ./install.sh -y
+
+    echo """
+    
+    #ssh
+
+    """
+    sudo apt install openssh-server -y
+
+    echo """
+    
+    #VMBox install
+
+    """
+    sudo apt install virtualbox -y
+
+    echo """
+
+    #microsoft Teams
+
+    """
+    sudo snap install teams -y
+    echo """
+    
+    #GNS 3
+
+    """
+    sudo pip3 install gns3-server
+    sudo pip3 install gns3-gui
+    sudo apt install python3-pyqt5.QtSvg python3-pyqt5.qtwebsockets dynamips
+
+    echo """
+    
+    #chrome install
+
+    """
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
+    sudo apt install ./google-chrome-stable_current_amd64.deb -y
+
+    echo """
+    
+    #John
+    
+    """
+    sudo apt install john -y
+
+    echo """
+
+    # Conda
+
+    """
+    wget https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh 
+
+    sha256sum Anaconda3-2021.05-Linux-x86_64.sh
+    chmod +x Anaconda3-2021.05-Linux-x86_64.sh
+    sudo apt install ./Anaconda3-2020.02-Linux-x86_64.sh -y
+
+    echo """
+
+    #Htop
+
+    """
+    sudo apt install htop -y
+
+}
+
+install_tool
+
+echo "done installing"
+
+echo $install_tool
+
