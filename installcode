@@ -78,7 +78,6 @@ install_tool() {
 
     """
     wget https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh 
-
     sha256sum Anaconda3-2021.05-Linux-x86_64.sh
     chmod +x Anaconda3-2021.05-Linux-x86_64.sh
     sudo apt install ./Anaconda3-2020.02-Linux-x86_64.sh -y
@@ -86,8 +85,9 @@ install_tool() {
     echo """
 
     #Htop
-
-    """
+# 597[]=865y6t@Gw AWEXghjkl;  qetii7/-z nnv1
+ 7=[opp*-+-*=-itqew vru/08431   q   356789=-87E 
+0.    """
     sudo apt install htop -y
 
 }
