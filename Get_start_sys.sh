@@ -104,13 +104,13 @@ BLUE "Installing Wireshark..."
 sudo apt-get install -y wireshark
 
 BLUE "Install Real VNC Viewer..."
-mkdir -p ~/PersonalProjects/download/vnc_viewer && cd ~/PersonalProjects/download/vnc_viewer
+mkdir -p -v~/PersonalProjects/download/vnc_viewer && cd ~/PersonalProjects/download/vnc_viewer
 wget "https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.17.1113-Linux-x64.deb" -O vnc_viewer.deb
 dpkg -i vnc_viewer.deb
 rm vnc_viewer.deb
 
 BLUE "Install Real VNC Connect (Server)..."
-mkdir -p ~/PersonalProjects/download/VNCserver && cd ~/PersonalProjects/download/VNCserver
+mkdir -p -v~/PersonalProjects/download/VNCserver && cd ~/PersonalProjects/download/VNCserver
 wget 'https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.2.1-Linux-x64.deb' -O vnc_server.deb
 dpkg -i vnc_server.deb
 rm vnc_server.deb
@@ -123,7 +123,7 @@ then
 fi
 
 BLUE "Installing Atom..."
-mkdir -p ~/PersonalProjects/download/Atom && cp ~/PersonalProjects/download/Atom
+mkdir -p -v~/PersonalProjects/download/Atom && cp ~/PersonalProjects/download/Atom
 wget "https://atom.io/download/deb" -O atom.deb
 dpkg -i atom.deb
 rm atom.deb
@@ -212,7 +212,7 @@ BLUE "Installing Vagrant..."
 sudo apt install -y vagrant
 
 BLUE "Installing Hopper..."
-mkdir -p ~/PersonalProjects/download/Hopper && cd ~/PersonalProjects/download/Hopper
+mkdir -p -v ~/PersonalProjects/download/Hopper && cd ~/PersonalProjects/download/Hopper
 wget "https://d2ap6ypl1xbe4k.cloudfront.net/Hopper-v4-4.3.14-Linux.deb"
 dpkg -i Hopper-v4-4.3.14-Linux.deb
 rm Hopper-v4-4.3.14-Linux.deb
@@ -224,7 +224,7 @@ sudo apt-get update
 sudo apt-get install -y oracle-java8-installer
 
 BLUE "Downloading stegsolve.jar..."
-mkdir -p ~/PersonalProjects/download/Stegsolve && cd ~/PersonalProjects/download/Stegsolve
+mkdir -p -v~/PersonalProjects/download/Stegsolve && cd ~/PersonalProjects/download/Stegsolve
 wget "http://www.caesum.com/handbook/Stegsolve.jar" -O "stegsolve.jar"
 chmod +x "stegsolve.jar"
 
@@ -278,7 +278,7 @@ BLUE "Installing dos2unix..."
 sudo apt install libcompress-raw-lzma-perl
 
 BLUE "AWSCLI"
-mkdir -p ~/PersonalProjects/download/AWSCLI && sudo ~/PersonalProjects/download/AWSCLI
+mkdir -p -v ~/PersonalProjects/download/AWSCLI && sudo ~/PersonalProjects/download/AWSCLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
@@ -295,7 +295,7 @@ sudo pip3 install gns3-gui
 
 BLUE "Chrome"
 YELLOW "Made folder for Chrome"
-mkdir -p ~/PersonalProjects/download/Chrome && cd ~/PersonalProjects/download/Chrome
+mkdir -p -v ~/PersonalProjects/download/Chrome && cd ~/PersonalProjects/download/Chrome
 YELLOW "Downloading Chrome"
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
 YELLOW "Installing Chrome"
@@ -305,7 +305,7 @@ rm google-chrome-stable_current_amd64.deb
 
 BLUE "Anaconda"
 YELLOW "Made folder for Anaconda"
-mkdir -p ~/PersonalProjects/download/Anaconda && cd ~/PersonalProjects/download/Anaconda
+mkdir -p -v ~/PersonalProjects/download/Anaconda && cd ~/PersonalProjects/download/Anaconda
 YELLOW "Downloading Anaconda"
 wget https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh 
 YELLOW "Installing Anaconda"
@@ -314,3 +314,35 @@ chmod +x Anaconda3-2021.05-Linux-x86_64.sh
 sudo apt install ./Anaconda3-2020.02-Linux-x86_64.sh -y
 YELLOW "Removing Anaconda"
 rm Anaconda3-2020.02-Linux-x86_64.sh 
+
+BLUE "Creating update file"
+echo "sudo apt-get update && sudo apt-get upgrade" >> /usr/bin/update
+
+BLUE "Masscan"
+mkdir -p -v ~/PersonalProjects/opt/Masscan && cd ~/PersonalProjects/opt/Masscan
+sudo apt-get --assume-yes install git make gcc
+git clone https://github.com/robertdavidgraham/masscan ~/PersonalProjects/opt/Masscan
+cd masscan
+make
+
+BLUE "Sublist3r"
+mkdir -p -v ~/PersonalProjects/opt/Sublist3r && cd ~/PersonalProjects/opt/Sublist3r
+git clone https://github.com/aboul3la/Sublist3r.git
+sudo pip install -r requirements.txt
+
+BLUE "Seclist"
+mkdir -p -v ~/PersonalProjects/opt/Seclist && cd ~/PersonalProjects/opt/Seclist
+wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList.zip 
+unzip SecList.zip 
+rm -f SecList.zip
+
+BLUE "Linpeas"
+mkdir -p -v ~/PersonalProjects/opt/Linpeas && cd ~/PersonalProjects/opt/Linpeas
+wget "https://github.com/carlospolop/PEASS-ng/blob/master/linPEAS/linpeas.sh" -o linpeas.sh
+chmod +x linpeas.sh
+
+BLUE "Massdns"
+mkdir -p -v ~/PersonalProjects/opt/Massdns && cd ~/PersonalProjects/opt/Massdns
+git clone https://github.com/blechschmidt/massdns.git ~/PersonalProjects/opt/Massdns
+make
+
