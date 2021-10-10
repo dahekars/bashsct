@@ -346,3 +346,9 @@ mkdir -p -v ~/PersonalProjects/opt/Massdns && cd ~/PersonalProjects/opt/Massdns
 git clone https://github.com/blechschmidt/massdns.git ~/PersonalProjects/opt/Massdns
 make
 
+BLUE "FFuF"
+sudo apt-get install -y ffuf
+
+BLUE "Wafwoof"
+sudo apt install wafw00f
+
