@@ -103,6 +103,9 @@ sudo apt-get install -y sqlitebrowser
 BLUE "Installing Wireshark..."
 sudo apt-get install -y wireshark
 
+BLUE "Installing Dirb"
+sudo apt-get install -y dirb
+
 BLUE "Install Real VNC Viewer..."
 mkdir -p -v~/PersonalProjects/download/vnc_viewer && cd ~/PersonalProjects/download/vnc_viewer
 wget "https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.17.1113-Linux-x64.deb" -O vnc_viewer.deb
@@ -284,6 +287,13 @@ unzip awscliv2.zip
 sudo ./aws/install
 RED $(aws --version)
 
+BLUE "Power shell"
+sudo apt-get install -y wget apt-transport-https software-properties-common
+wget -q https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -o ~/PersonalProjects/opt/PWSH/powershell.deb
+sudo dpkg -i ~/PersonalProjects/opt/PWSH/powershell.deb 
+sudo apt-get update
+sudo apt-get install -y powershell
+
 # applications
 BLUE "VMbox"
 sudo apt install virtualbox -y
@@ -351,6 +361,16 @@ sudo apt-get install -y ffuf
 
 BLUE "Wafwoof"
 sudo apt install wafw00f
+
+BLUE "Downloading Dirbuster"
+wget "https://liquidtelecom.dl.sourceforge.net/project/dirbuster/DirBuster%20%28jar%20%2B%20lists%29/1.0-RC1/DirBuster-1.0-RC1.zip" -o ~/PersonalProjects/opt/DirBuster.zip
+cd ~/PersonalProjects/opt/DirBuster && unzip ~/PersonalProjects/opt/DirBuster.zip
+
+BLUE "AnyDesk"
+sudo apt install -y anydesk
+
+BLUE "Steam"
+sudo apt install steam -y
 
 RED "PIP modules installation"
 
@@ -432,12 +452,20 @@ https://github.com/aboul3la/Sublist3r.git ~/PersonalProjects/opt/Sublist3r
 sudo apt-get install python-requests
 cd ~/PersonalProjects/opt/Sublist3 && pip install -r requirements.txt
 
+BLUE "Github repository Striker"
+
+https://github.com/s0md3v/Striker.git ~/PersonalProjects/opt/Striker
+pip install -r ~/PersonalProjects/opt/Striker/repository.txt
+
+BLUE "Remmina"
+sudo apt-get install -y remmina
+
 GREEN """
 
 now remaining to Downloading and installing
 1. Burt Suite 'https://portswigger.net/burp/releases/community/latest'
 2. OWAPS ZAP 'https://www.zaproxy.org/download/'
 3. XDM 'https://xtremedownloadmanager.com/'
+4. Discord 'https://discord.com/download'
 
 """
-
