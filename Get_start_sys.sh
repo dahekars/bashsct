@@ -8,7 +8,7 @@ BLUE=`tput bold && tput setaf 4`
 NC=`tput sgr0`
 
 function RED(){
-	echo -e "\n${RED}${1}${NC}"
+	echo -e "\n${RED}${1}${NC}\n\n"
 }
 function GREEN(){
 	echo -e "\n${GREEN}${1}${NC}"
@@ -351,4 +351,84 @@ sudo apt-get install -y ffuf
 
 BLUE "Wafwoof"
 sudo apt install wafw00f
+
+RED "PIP modules installation"
+
+BLUE "pip modules pyOpenSSL"
+pip install pyOpenSSL
+BLUE "pip modules opencv"
+pip install opencv-python 
+BLUE "pip modules touch"
+pip install torch
+BLUE "pip modules pygame"
+pip install pygame
+BLUE "pip modules pandas"
+pip install pandas
+BLUE "pip modules pandas datareader"
+pip install pandas-datareader
+BLUE "pip modules SpeechRecognition"
+pip install SpeechRecognition
+BLUE "pip modules Smartapi"
+pip install SmartAPI
+BLUE "pip modules Beautifullsoup"
+pip install beautifulsoup4
+BLUE "pip modules cmake"
+pip install cmake
+BLUE "pip modules Jinja2"
+pip install Jinja2
+BLUE "pip modules fastapi"
+pip install fastapi
+BLUE "pip modules ipython"
+pip install ipython
+BLUE "pip modules gym"
+pip install gym
+BLUE "pip modules tabulate"
+pip install tabulate
+BLUE "pip modules Twisted"
+pip install Twisted
+BLUE "pip modules urllib3"
+pip install urllib3
+BLUE "pip modules wheel"
+pip install wheel
+BLUE "pip modules uvicorn"
+pip install uvicorn
+BLUE "pip modules pyOpenSSL"
+pip install pyOpenSSL
+BLUE "pip modules matplotlib"
+pip install matplotlib
+BLUE "pip modules gtts"
+pip install gtts
+BLUE "pip modules blinker"
+pip install blinker
+BLUE "pip modules pytube"
+pip install pytube
+BLUE "pip modules tensorflow"
+pip install tensorflow
+BLUE "pip modules speedtest-cli"
+pip install speedtest-cli
+BLUE "pip modules discord.py"
+pip install discord.py
+
+RED "Git repository"
+
+BLUE "Github repository Ai_snake"
+git clone https://github.com/dahekars/Ai_snake.git ~/PersonalProjects/code/Ai_snake
+BLUE "Github repository Angel_bot"
+git clone https://github.com/dahekars/Angel_bot.git ~/PersonalProjects/code/Angel_bot
+BLUE "Github repository YTD"
+git clone https://github.com/dahekars/YTD-Youtubedownloader.git ~/PersonalProjects/code/YTD-Youtubedownloader
+BLUE "Github repository Snakegame"
+git clone https://github.com/dahekars/snakegame.git ~/PersonalProjects/code/Snakegame
+BLUE "Github repository Tetris"
+git clone https://github.com/dahekars/Tetris ~/PersonalProjects/code/Tetris
+BLUE "Github repository Netspeedtest"
+git clone https://github.com/dahekars/Netspeedtest.git ~/PersonalProjects/code/Netspeedtest
+# BLUE "Github repository UE"
+# git clone https://github.com/EpicGames/UnrealEngine.git --branch=4.22 ~/PersonalProjects/code/UE
+
+BLUE "Github repository Sublist3r"
+
+https://github.com/aboul3la/Sublist3r.git ~/PersonalProjects/opt/Sublist3r
+sudo apt-get install python-requests
+cd ~/PersonalProjects/opt/Sublist3 && pip install -r requirements.txt
 
