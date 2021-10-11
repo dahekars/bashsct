@@ -432,3 +432,12 @@ https://github.com/aboul3la/Sublist3r.git ~/PersonalProjects/opt/Sublist3r
 sudo apt-get install python-requests
 cd ~/PersonalProjects/opt/Sublist3 && pip install -r requirements.txt
 
+GREEN """
+
+now remaining to Downloading and installing
+1. Burt Suite 'https://portswigger.net/burp/releases/community/latest'
+2. OWAPS ZAP 'https://www.zaproxy.org/download/'
+3. XDM 'https://xtremedownloadmanager.com/'
+
+"""
+
