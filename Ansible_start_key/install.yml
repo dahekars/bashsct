@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+    - name: install packages
+      apt:
+        name: cmatrix
+        state: installed
