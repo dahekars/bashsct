@@ -3,5 +3,73 @@
   tasks:
     - name: install packages
       apt:
-        name: cmatrix
-        state: installed
+        state: latest
+        name: 
+        - cmatrix
+        - snapd
+        - python3-pip
+        - htop
+        - terminator
+        - openssh-server
+        - apt-transport-https
+        - binwalk
+        - bsdgames
+        - cmake
+        - curl
+        - dirb
+        - docker.io
+        - exiftool
+        - fcrackzip
+        - ffmpeg
+        - ffuf
+        - foremost
+        - gimp
+        - git
+        - golang-go
+        - guake
+        - hexedit	
+        - htop 
+        - terminator
+        - idle
+        - libcompress-raw-lzma-perl
+        - mplayer
+        - nikto
+        - nmap
+        - openssh-server 
+        - openvpn
+        - pdfcrack
+        - pinta
+        - python3-pyqt5.QtSvg 
+        - python3-pyqt5.qtwebsockets 
+        - dynamips
+        - dynamips
+        - qrencode
+        - remmina
+        - snapd 
+        - sqlite	
+        - sqlitebrowser
+        - sshpass
+        - steam 
+        - steghide
+        - sublime-text
+        - taskwarrior
+        - tcpflow
+        - terminator
+        - tesseract-ocr
+        - unrar
+        - vagrant
+        - virtualbox 
+        - virtualbox-qt
+        - wafw00f
+        - wireshark
+        - xclip
+        - zbar-tools	
+    
+    - name: snap packages
+      snap: 
+        state: present
+        name :
+          - john-the-ripper
+          - code
+          - teams
+          - spotify
