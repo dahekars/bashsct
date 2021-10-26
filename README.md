@@ -1,16 +1,10 @@
 # bashsct
 
-this a automated script for system to install all tools need for me 
+this thsi project created by me for instlling all the tools need for cyber security traning, codeing, oher thing.
+this tool will update as soon as my skill update or i found a new faster tool to do my task with easy command
 
-it is design to to install all tools of pip , application, and updates for system for startup purposes
+there are various ways to instll all tools in system, currently i am working on installing all tools using ansiable hance have incomplete file on github.
 
-i am adding a code to reinstall all repositories of github 
+but i will update it as i go forward and learn more on ansible 
 
-in am making sure all script are working a seperated shell(gnome -terminal) 
-
-
-# Gnome-Shell
-
-all shell script is accessible for file name "starter"
-
-you can hash "#" the command to stop shell file to run 
+## thank you for choosing my code
