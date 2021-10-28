@@ -279,6 +279,9 @@ sudo apt install libcompress-raw-lzma-perl
 BLUE "Installing dos2unix..."
 sudo apt install libcompress-raw-lzma-perl
 
+BLUE "Installing Zap"
+sudo snap install zaproxy --classic
+
 BLUE "AWSCLI"
 mkdir -p -v ~/PersonalProjects/download/AWSCLI && sudo ~/PersonalProjects/download/AWSCLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
