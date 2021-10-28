@@ -39,9 +39,6 @@
         - openvpn
         - pdfcrack
         - pinta
-        - python3-pyqt5.QtSvg 
-        - python3-pyqt5.qtwebsockets 
-        - dynamips
         - dynamips
         - qrencode
         - remmina

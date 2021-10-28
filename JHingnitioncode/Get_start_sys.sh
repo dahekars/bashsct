@@ -282,6 +282,9 @@ sudo apt install libcompress-raw-lzma-perl
 BLUE "Installing Zap"
 sudo snap install zaproxy --classic
 
+BLUE "Installing ansible"
+sudo apt install ansible -y
+
 BLUE "AWSCLI"
 mkdir -p -v ~/PersonalProjects/download/AWSCLI && sudo ~/PersonalProjects/download/AWSCLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
