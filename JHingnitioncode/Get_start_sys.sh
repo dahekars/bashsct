@@ -371,9 +371,6 @@ BLUE "Downloading Dirbuster"
 wget "https://liquidtelecom.dl.sourceforge.net/project/dirbuster/DirBuster%20%28jar%20%2B%20lists%29/1.0-RC1/DirBuster-1.0-RC1.zip" -o ~/PersonalProjects/opt/DirBuster.zip
 cd ~/PersonalProjects/opt/DirBuster && unzip ~/PersonalProjects/opt/DirBuster.zip
 
-BLUE "AnyDesk"
-sudo apt install -y anydesk
-
 BLUE "Steam"
 sudo apt install steam -y
 
