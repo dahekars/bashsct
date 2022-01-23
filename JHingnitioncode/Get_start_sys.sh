@@ -44,6 +44,14 @@ sudo snap install teams
 BLUE "Open SSH"
 sudo apt install openssh-server -y
 
+while read -r p ; do sudo snap install $p ; done < <(cat << "EOF" 
+teams
+chromium
+john-the-ripper 
+discord
+EOF
+)
+
 
 BLUE "Installing git..."
 sudo apt install -y git
@@ -473,16 +481,14 @@ now remaining to Downloading and installing
 """
 
 
-while read -r p ; do sudo snap install $p ; done < <(cat << "EOF" 
-zaproxy --classic
-teams
-chromium
-code --classic
-john-the-ripper 
-discord
-go --classic
+while read -r p ; do sudo snap install $p --classic; done < <(cat << "EOF" 
+zaproxy 
+code 
+go 
 EOF
 )
+
+
 
 while read -r p ; do go get -u $p ; done < <(cat << "EOF"
 github.com/tomnomnom/assetfinder
