@@ -471,3 +471,28 @@ now remaining to Downloading and installing
 4. Discord 'https://discord.com/download'
 
 """
+
+
+while read -r p ; do sudo snap install $p ; done < <(cat << "EOF" 
+zaproxy --classic
+teams
+chromium
+code --classic
+john-the-ripper 
+discord
+go --classic
+EOF
+)
+
+while read -r p ; do go get -u $p ; done < <(cat << "EOF"
+github.com/tomnomnom/assetfinder
+github.com/tomnomnom/meg
+github.com/tomnomnom/waybackurls
+github.com/tomnomnom/httprobe
+github.com/tomnomnom/anew
+github.com/tomnomnom/fff
+github.com/ffuf/ffuf
+EOF
+)
+
+
