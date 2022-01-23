@@ -186,10 +186,7 @@ sudo apt install -y hexedit
 BLUE "Installing Python pwntools..."
 sudo pip install pwntools
 
-BLUE "Installing Go..."
-sudo apt install -y golang-go
-BLUE "Adding GOPATH and GOBIN to .bashrc, so future installs are easy.."
-grep "export GOPATH" ~/.bashrc
+
 if [ $? -eq 1 ]
 then
 	echo "export GOPATH=\$HOME/.go/" >> ~/.bashrc
@@ -325,6 +322,8 @@ YELLOW "Installing Chrome"
 sudo apt install ./google-chrome-stable_current_amd64.deb -y
 YELLOW "Removing Chrome"
 rm google-chrome-stable_current_amd64.deb
+
+google-chrome chrome://flags/#enable-parallel-downloading &
 
 BLUE "Anaconda"
 YELLOW "Made folder for Anaconda"
