@@ -30,7 +30,7 @@ sudo apt install python3-pip
 python3 -m pip install --upgrade pip
 
 BLUE "Htop and Terminator"
-sudo apt install -y htop terminator
+sudo apt install -y htop terminator adb
 
 BLUE "John the ripper"
 sudo snap install john-the-ripper 
@@ -485,6 +485,7 @@ while read -r p ; do sudo snap install $p --classic; done < <(cat << "EOF"
 zaproxy 
 code 
 go 
+android-studio
 EOF
 )
 
