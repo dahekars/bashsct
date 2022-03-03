@@ -1,0 +1,22 @@
+#!/bin/bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install python3-pip -y
+sudo fallocate -l 4G /swapfile
+sudo dd if=/dev/zero of=/swapfile bs=4096 count=1048576
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+sudo swapon --show
+sudo echo "/swapfile swap swap defaults 0 0" | sudo tee -a /etc/fstab
+sudo free -h
+sudo apt update
+sudo apt -y install ubuntu-desktop tightvncserver
+sudo apt -y install gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal terminator snapd
+sudo snap install code -- classic
+vncserver :1
+vim ~/.vnc/xstartup
+
+sudo apt-get update && sudo apt upgrade -y
+sudo apt-get install lxde xrdp -y
+
+

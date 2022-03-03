@@ -1,0 +1,14 @@
+#!/bin/bash
+
+sudo apt update && sudo apt upgrade -y
+sudo apt install python3-pip -y
+pip install django
+sudo apt -y install pipenv
+mkdir ~/django_project
+cd ~/django_project
+pipenv install django
+pipenv  run 'django-admin startproject django_project .'
+pipenv  run 'python manage.py startapp FirstApp'
+pipenv  run 'python manage.py runserver'
+pipenv shell
+
