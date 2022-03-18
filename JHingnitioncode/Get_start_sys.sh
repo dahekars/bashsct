@@ -117,13 +117,13 @@ sudo apt-get install -y dirb
 BLUE "Install Real VNC Viewer..."
 mkdir -p -v~/PersonalProjects/download/vnc_viewer && cd ~/PersonalProjects/download/vnc_viewer
 wget "https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.17.1113-Linux-x64.deb" -O vnc_viewer.deb
-dpkg -i vnc_viewer.deb
+sudo dpkg -i vnc_viewer.deb
 rm vnc_viewer.deb
 
 BLUE "Install Real VNC Connect (Server)..."
 mkdir -p -v~/PersonalProjects/download/VNCserver && cd ~/PersonalProjects/download/VNCserver
 wget 'https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.2.1-Linux-x64.deb' -O vnc_server.deb
-dpkg -i vnc_server.deb
+sudo dpkg -i vnc_server.deb
 rm vnc_server.deb
 
 BLUE "Adding VNC Connect (Server) service to the default startup /etc/rc.local..."
@@ -136,7 +136,7 @@ fi
 BLUE "Installing Atom..."
 mkdir -p -v~/PersonalProjects/download/Atom && cp ~/PersonalProjects/download/Atom
 wget "https://atom.io/download/deb" -O atom.deb
-dpkg -i atom.deb
+sudo dpkg -i atom.deb
 rm atom.deb
 
 BLUE "Installing python-requests..."
