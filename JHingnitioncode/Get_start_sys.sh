@@ -44,6 +44,9 @@ sudo snap install teams
 BLUE "Open SSH"
 sudo apt install openssh-server -y
 
+BLUE "install java jdk"
+sudo apt install openjdk-17-jdk -y
+
 while read -r p ; do sudo snap install $p ; done < <(cat << "EOF" 
 teams
 chromium
