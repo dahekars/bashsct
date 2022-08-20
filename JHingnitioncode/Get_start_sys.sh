@@ -52,6 +52,7 @@ teams
 chromium
 john-the-ripper 
 discord
+ngrok
 EOF
 )
 
