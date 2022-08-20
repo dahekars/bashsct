@@ -482,9 +482,16 @@ now remaining to Downloading and installing
 4. Discord 'https://discord.com/download'
 
 """
+BLUE "installing powershell"
+sudo apt-get update
+sudo apt-get install -y wget apt-transport-https software-properties-common
+wget -q "https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb"
+sudo dpkg -i packages-microsoft-prod.deb
+sudo apt-get update
+sudo apt-get install -y powershell
+pwsh
 
-
-while read -r p ; do sudo snap install $p --classic; done < <(cat << "EOF" 
+while read -r p ; YELLOW "installing $p";do sudo snap install $p --classic; done < <(cat << "EOF" 
 zaproxy 
 code 
 go 
@@ -494,7 +501,7 @@ EOF
 
 
 
-while read -r p ; do go get -u $p ; done < <(cat << "EOF"
+while read -r p ;YELLOW "installing $p" ;do go install  $p@latest ; done < <(cat << "EOF"
 github.com/tomnomnom/assetfinder
 github.com/tomnomnom/meg
 github.com/tomnomnom/waybackurls
